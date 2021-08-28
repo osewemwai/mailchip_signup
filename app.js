@@ -56,6 +56,12 @@ app.post("/", (req, res) => {
   run();
 });
 
+// async function run() {
+//   const response = await mailchimp.ping.get();
+//   console.log(response);
+// }
+// run();
+
 app.listen(port, (req, res) => {
   console.log("App listening to port :" + port);
 });
