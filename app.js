@@ -44,11 +44,13 @@ app.post("/", (req, res) => {
       );
 
       if (response.statusCode === 400) {
+          console.log(response)
         res.sendFile(__dirname + "/failure.html");
       } else {
         res.sendFile(__dirname + "/success.html");
       }
     } catch (e) {
+        console.log(response)
       res.sendFile(__dirname + "/failure.html");
     }
   }
